@@ -1,7 +1,7 @@
 from datetime import datetime
 import pyttsx3
-from plyer import notification\
-
+from plyer import notification
+import os
 def notifyme(message):
     notification.notify(
         title="TO-DO-LIST",
@@ -32,6 +32,7 @@ while True:
 		engine=pyttsx3.init()
 		engine.setProperty('rate', 175)
 		engine.say(speak)
+		os.startfile(r"C:\Users\gkush\Downloads\Music\high.mp3")
 		engine.say(todo)
 		notifyme(todo)
 		engine.runAndWait()
